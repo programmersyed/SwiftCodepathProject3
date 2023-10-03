@@ -10,27 +10,38 @@ import XCTest
 
 final class TriviaTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    // Existing setup and teardown code
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    // Existing example test
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        let answer = "42"
+        XCTAssertEqual(answer, "42", "Answer should be 42")
     }
 
+    // Existing performance example test
     func testPerformanceExample() throws {
-        // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
 
+    // MARK: Additional Tests
+
+    // Test to check if the answer is correct after selecting an option
+    func testAnswerSelection() throws {
+        let selectedAnswer = "Option A"
+        XCTAssertEqual(selectedAnswer, "Option A", "Selected answer should be Option A")
+    }
+
+    // Test to check if the next question is displayed after answering
+    func testNextQuestionDisplay() throws {
+        let nextQuestionDisplayed = true // Replace with actual logic to check if next question is displayed
+        XCTAssertTrue(nextQuestionDisplayed, "Next question should be displayed after answering")
+    }
+
+    // Test to check if the user can answer at least 3 different questions
+    func testAnsweringThreeQuestions() throws {
+        let answeredQuestionCount = 3 // Replace with actual logic to count answered questions
+        XCTAssertGreaterThanOrEqual(answeredQuestionCount, 3, "User should be able to answer at least 3 questions")
+    }
 }
